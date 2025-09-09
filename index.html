@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Earth</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-green-700 text-white flex justify-between items-center px-6 py-3">
+    <h1 class="text-xl font-bold">Green Earth</h1>
+    <ul class="flex gap-6">
+      <li><a href="#about" class="hover:underline">About</a></li>
+      <li><a href="#gallery" class="hover:underline">Gallery</a></li>
+      <li><a href="#plant" class="hover:underline">Plant a Tree</a></li>
+    </ul>
+    <button class="bg-yellow-400 text-black px-4 py-2 rounded-full">Plant a Tree</button>
+  </nav>
+
+  <!-- Banner -->
+  <section class="bg-green-100 text-center py-20">
+    <h2 class="text-4xl font-bold mb-4">Plant a Tree, Grow a Future</h2>
+    <p class="mb-6 text-gray-700">Join our mission to plant 1 million trees and make the Earth greener for future generations.</p>
+    <button class="bg-green-700 text-white px-6 py-3 rounded-lg">Get Involved</button>
+  </section>
+
+  <!-- About Campaign -->
+  <section id="about" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">
+      <img src="./assets/about.png" 
+           alt="Plant" class="rounded-lg shadow-md">
+      <div>
+        <h3 class="text-2xl font-bold mb-4">About the Campaign</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Green Earth is a global reforestation initiative dedicated to fighting climate change.
+          Our goal is to plant over 500,000 trees worldwide by creating carbon sinks, restoring habitats,
+          and combating global warming. 
+        </p>
+        <ul class="list-disc list-inside mt-4 text-gray-600">
+          <li>Restoration of ecosystems</li>
+          <li>Improvement of local air quality</li>
+          <li>Support for local communities</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script src="./Scripts/index.js"></script>
+</body>
+</html>
