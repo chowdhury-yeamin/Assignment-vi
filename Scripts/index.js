@@ -31,7 +31,7 @@ async function loadCategories() {
       const btn = document.createElement("button");
       btn.textContent = catName;
       btn.className =
-        "px-3 py-1 bg-green-200 rounded hover:bg-green-300 w-full text-left";
+        "px-3 py-1  rounded hover:bg-green-500 w-full text-left";
       btn.addEventListener("click", () => loadTreesByCategory(catId, btn));
       categoriesContainer.appendChild(btn);
     });
@@ -45,8 +45,8 @@ async function loadCategories() {
 async function loadTreesByCategory(catId, btn) {
   document
     .querySelectorAll("#categories button")
-    .forEach((b) => b.classList.remove("bg-green-400", "text-white"));
-  btn.classList.add("bg-green-400", "text-white");
+    .forEach((b) => b.classList.remove("bg-green-700", "text-black"));
+  btn.classList.add("bg-green-700", "text-black");
 
   plantsGrid.innerHTML = "";
   gridSpinner.classList.remove("hidden");
@@ -103,7 +103,7 @@ function renderPlants(plants) {
       <p class="text-sm mb-1">${tree.description.slice(0, 60)}...</p>
       <p class="text-xs text-gray-500 mb-2">${tree.category}</p>
       <p class="font-semibold mb-2">$${tree.price}</p>
-      <button class="bg-yellow-400 text-black px-3 py-1 rounded hover:bg-yellow-300 add-cart">Add to Cart</button>
+      <button class="bg-yellow-400 text-black px-3 py-1 rounded hover:bg-yellow-600 add-cart">Add to Cart</button>
     `;
 
     card.querySelector("h3").addEventListener("click", () => showModal(tree));
@@ -142,6 +142,10 @@ modalClose.addEventListener("click", () => {
 
 // === Cart Functions
 function addToCart(tree) {
+  
+  const confirmAdd = confirm(`Do you want to add "${tree.name}" to the cart?`);
+  if (!confirmAdd) return; 
+
   tree.price = parseFloat(tree.price);
   cart.push(tree);
   renderCart();
