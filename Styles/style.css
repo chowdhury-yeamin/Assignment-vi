@@ -1,0 +1,23 @@
+/* small custom styles for spinner + leaf tilts + modal backdrop */
+      .spin {
+        border-top-color: transparent;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* slight inward tilt for leaves */
+      .leaf-left img {
+        transform: rotate(-18deg);
+      }
+      .leaf-right img {
+        transform: rotate(18deg);
+      }
+
+      /* modal backdrop */
+      .modal-backdrop {
+        background: rgba(0, 0, 0, 0.5);
+      }
